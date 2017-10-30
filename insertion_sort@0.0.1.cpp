@@ -27,7 +27,7 @@ bool input(float * &elements, unsigned int num)
 
 void inssort(float *elements, unsigned int num)
 {
-	for (int i = 1; i < num; i++)
+	for (unsigned int i = 1; i < num; i++)
 		for (int j = i; (j>0) && (elements[j - 1] > elements[j]); j--)
 			swap(elements[j - 1], elements[j]);
 }
@@ -49,7 +49,7 @@ int main() {
 	}
 
 	inssort(elements, num);
-	for (int i = 0; i < num; i++) cout << elements[i] << ' ';
+	for (unsigned int i = 0; i < num; i++) cout << elements[i] << ' ';
 
 	return 0;
 }
